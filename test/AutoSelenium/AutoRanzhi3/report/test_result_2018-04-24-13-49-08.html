@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>然之协同办公系统自动化测试结果</title>
+    <meta name="generator" content="HtmlTestRunner 0.8.4"/>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    
+<style type="text/css" media="screen">
+
+/* -- css div popup ------------------------------------------------------------------------ */
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #99CCFF;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 10pt;
+    width: 500px;
+}
+
+/* -- report ------------------------------------------------------------------------ */
+
+#show_detail_line .label {
+    font-size: 85%;
+    cursor: pointer;
+}
+
+#show_detail_line {
+    margin: 2em auto 1em auto;
+}
+
+#total_row  { font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+</style>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class="container">
+    <div class='heading'>
+<h1>然之协同办公系统自动化测试结果</h1>
+<p><strong>Start Time:</strong> 2018-04-24 13:49:08</p>
+<p><strong>Duration:</strong> 0:02:15.214734</p>
+<p><strong>Status:</strong> <span class="text text-danger">Failure <strong>3</strong></span> <span class="text text-warning">Error <strong>5</strong></span></p>
+
+<p class='description'>测试然之功能的详细自动化测试结果</p>
+</div>
+
+
+    
+<p id='show_detail_line'>
+<span class="label label-primary" onclick="showCase(0)">Summary</span>
+<span class="label label-danger" onclick="showCase(1)">Failed</span>
+<span class="label label-default" onclick="showCase(2)">All</span>
+</p>
+<table id='result_table' class="table">
+    <thead>
+        <tr id='header_row'>
+            <th>Test Group/Test case</td>
+            <th>Count</td>
+            <th>Pass</td>
+            <th>Fail</td>
+            <th>Error</td>
+            <th>View</td>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr class='text text-warning'>
+    <td>unit_test.login_testcases_01.LoginTestCases1</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td>4</td>
+    <td><a class="btn btn-xs btn-primary"href="javascript:showClassDetail('c1',4)">Detail</a></td>
+</tr>
+
+<tr id='ft1.1' class='text text-success'>
+    <td class='text text-warning'><div class='testcase'>test_log_in_01</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        error</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: -- testcase start --
+-- testcase_01 正确的用户名密码 --
+-- testcase finished --
+Traceback (most recent call last):
+  File "E:\python_study\AutoRanzhi3\unit_test\login_testcases_01.py", line 27, in test_log_in_01
+    self.rzLogin.log_in("admin", "111111")
+  File "E:\python_study\AutoRanzhi3\function\page\login_page.py", line 15, in log_in
+    if self.open_from_excel()==False:      #根据excel中的url打开浏览器
+  File "E:\python_study\AutoRanzhi3\function\base\base_page.py", line 41, in open_from_excel
+    self.driver.get(self.base_url)
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A8090/ranzhi/www&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20%E6%97%A0%E6%B3%95%E5%BB%BA%E7%AB%8B%E5%88%B0%20localhost%3A8090%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5%E3%80%82
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.2' class='text text-success'>
+    <td class='text text-warning'><div class='testcase'>test_log_in_02</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        error</a>
+
+    <div id='div_ft1.2' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.2: -- testcase start --
+-- testcase_01 正确的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_02 错误的用户名密码 --
+-- testcase finished --
+Traceback (most recent call last):
+  File "E:\python_study\AutoRanzhi3\unit_test\login_testcases_01.py", line 33, in test_log_in_02
+    self.rzLogin.log_in("abcdef", "222222")
+  File "E:\python_study\AutoRanzhi3\function\page\login_page.py", line 15, in log_in
+    if self.open_from_excel()==False:      #根据excel中的url打开浏览器
+  File "E:\python_study\AutoRanzhi3\function\base\base_page.py", line 41, in open_from_excel
+    self.driver.get(self.base_url)
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A8090/ranzhi/www&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20%E6%97%A0%E6%B3%95%E5%BB%BA%E7%AB%8B%E5%88%B0%20localhost%3A8090%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5%E3%80%82
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.3' class='text text-success'>
+    <td class='text text-warning'><div class='testcase'>test_log_in_03</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
+        error</a>
+
+    <div id='div_ft1.3' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.3: -- testcase start --
+-- testcase_01 正确的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_02 错误的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_03 空的用户名或密码 --
+-- testcase finished --
+Traceback (most recent call last):
+  File "E:\python_study\AutoRanzhi3\unit_test\login_testcases_01.py", line 40, in test_log_in_03
+    self.rzLogin.log_in("cdefab", "")
+  File "E:\python_study\AutoRanzhi3\function\page\login_page.py", line 15, in log_in
+    if self.open_from_excel()==False:      #根据excel中的url打开浏览器
+  File "E:\python_study\AutoRanzhi3\function\base\base_page.py", line 41, in open_from_excel
+    self.driver.get(self.base_url)
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A8090/ranzhi/www&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20%E6%97%A0%E6%B3%95%E5%BB%BA%E7%AB%8B%E5%88%B0%20localhost%3A8090%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5%E3%80%82
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.4' class='text text-success'>
+    <td class='text text-warning'><div class='testcase'>test_log_in_04</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
+        error</a>
+
+    <div id='div_ft1.4' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.4: -- testcase start --
+-- testcase_01 正确的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_02 错误的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_03 空的用户名或密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_04 正确的用户名密码 --
+-- testcase finished --
+Traceback (most recent call last):
+  File "E:\python_study\AutoRanzhi3\unit_test\login_testcases_01.py", line 47, in test_log_in_04
+    self.rzLogin.log_in("admin", "111111")
+  File "E:\python_study\AutoRanzhi3\function\page\login_page.py", line 15, in log_in
+    if self.open_from_excel()==False:      #根据excel中的url打开浏览器
+  File "E:\python_study\AutoRanzhi3\function\base\base_page.py", line 41, in open_from_excel
+    self.driver.get(self.base_url)
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A8090/ranzhi/www&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20%E6%97%A0%E6%B3%95%E5%BB%BA%E7%AB%8B%E5%88%B0%20localhost%3A8090%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5%E3%80%82
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='text text-warning'>
+    <td>unit_test.login_testcases_02.LoginTestCases2</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a class="btn btn-xs btn-primary"href="javascript:showClassDetail('c2',1)">Detail</a></td>
+</tr>
+
+<tr id='ft2.1' class='text text-success'>
+    <td class='text text-warning'><div class='testcase'>test_log_in_batch</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+        error</a>
+
+    <div id='div_ft2.1' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.1: -- testcase start --
+-- testcase_01 正确的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_02 错误的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_03 空的用户名或密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_04 正确的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase：正确的用户名密码登录 --
+-- testcase finished --
+Traceback (most recent call last):
+  File "E:\python_study\AutoRanzhi3\unit_test\login_testcases_02.py", line 35, in test_log_in_batch
+    self.rzLogin.log_in(case[1], case[2])   #调用公用函数执行登录然之
+  File "E:\python_study\AutoRanzhi3\function\page\login_page.py", line 15, in log_in
+    if self.open_from_excel()==False:      #根据excel中的url打开浏览器
+  File "E:\python_study\AutoRanzhi3\function\base\base_page.py", line 41, in open_from_excel
+    self.driver.get(self.base_url)
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A8090/ranzhi/www&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20%E6%97%A0%E6%B3%95%E5%BB%BA%E7%AB%8B%E5%88%B0%20localhost%3A8090%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5%E3%80%82
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='text text-danger'>
+    <td>unit_test.product_add_testcases_01.ProductAddTestCases1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a class="btn btn-xs btn-primary"href="javascript:showClassDetail('c3',1)">Detail</a></td>
+</tr>
+
+<tr id='ft3.1' class='text text-success'>
+    <td class='text text-danger'><div class='testcase'>test_product_add_batch</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
+        fail</a>
+
+    <div id='div_ft3.1' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.1: -- testcase start --
+-- testcase_01 正确的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_02 错误的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_03 空的用户名或密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_04 正确的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase：正确的用户名密码登录 --
+-- testcase finished --
+-- testcases start --
+-- testcase：正确的产品添加1 --
+异常类型：&lt;class 'selenium.common.exceptions.WebDriverException'&gt;, 在 product_add_testcases_01.py 的第 36 行；Message: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A8090/ranzhi/www&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20%E6%97%A0%E6%B3%95%E5%BB%BA%E7%AB%8B%E5%88%B0%20localhost%3A8090%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5%E3%80%82
+
+-- testcases finished --
+Traceback (most recent call last):
+  File "E:\python_study\AutoRanzhi3\unit_test\product_add_testcases_01.py", line 61, in test_product_add_batch
+    self.assertEqual(nFail, 0, "共执行用例数:%d;其中失败用例数:%d"%(nCount, nFail))
+AssertionError: 1 != 0 : 共执行用例数:1;其中失败用例数:1
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='text text-danger'>
+    <td>unit_test.contact_add_testcases.ContactAddTestCases1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a class="btn btn-xs btn-primary"href="javascript:showClassDetail('c4',1)">Detail</a></td>
+</tr>
+
+<tr id='ft4.1' class='text text-success'>
+    <td class='text text-danger'><div class='testcase'>test_contact_add_batch</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.1')" >
+        fail</a>
+
+    <div id='div_ft4.1' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.1: -- testcase start --
+-- testcase_01 正确的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_02 错误的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_03 空的用户名或密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_04 正确的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase：正确的用户名密码登录 --
+-- testcase finished --
+-- testcases start --
+-- testcase：正确的产品添加1 --
+异常类型：&lt;class 'selenium.common.exceptions.WebDriverException'&gt;, 在 product_add_testcases_01.py 的第 36 行；Message: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A8090/ranzhi/www&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20%E6%97%A0%E6%B3%95%E5%BB%BA%E7%AB%8B%E5%88%B0%20localhost%3A8090%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5%E3%80%82
+
+-- testcases finished --
+-- testcases start --
+-- testcase：正确的联系人 --
+异常类型：&lt;class 'selenium.common.exceptions.WebDriverException'&gt;, 在 contact_add_testcases.py 的第 32 行；Message: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A8090/ranzhi/www&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20%E6%97%A0%E6%B3%95%E5%BB%BA%E7%AB%8B%E5%88%B0%20localhost%3A8090%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5%E3%80%82
+
+-- testcases finished --
+Traceback (most recent call last):
+  File "E:\python_study\AutoRanzhi3\unit_test\contact_add_testcases.py", line 57, in test_contact_add_batch
+    self.assertEqual(nFail, 0, "共执行用例数:%d;其中失败用例数:%d"%(nCount, nFail))
+AssertionError: 1 != 0 : 共执行用例数:1;其中失败用例数:1
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='text text-danger'>
+    <td>unit_test.contact_find_testcases.ContactFindTestCases1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a class="btn btn-xs btn-primary"href="javascript:showClassDetail('c5',1)">Detail</a></td>
+</tr>
+
+<tr id='ft5.1' class='text text-success'>
+    <td class='text text-danger'><div class='testcase'>test_contact_find_batch</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.1')" >
+        fail</a>
+
+    <div id='div_ft5.1' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.1: -- testcase start --
+-- testcase_01 正确的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_02 错误的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_03 空的用户名或密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase_04 正确的用户名密码 --
+-- testcase finished --
+-- testcase start --
+-- testcase：正确的用户名密码登录 --
+-- testcase finished --
+-- testcases start --
+-- testcase：正确的产品添加1 --
+异常类型：&lt;class 'selenium.common.exceptions.WebDriverException'&gt;, 在 product_add_testcases_01.py 的第 36 行；Message: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A8090/ranzhi/www&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20%E6%97%A0%E6%B3%95%E5%BB%BA%E7%AB%8B%E5%88%B0%20localhost%3A8090%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5%E3%80%82
+
+-- testcases finished --
+-- testcases start --
+-- testcase：正确的联系人 --
+异常类型：&lt;class 'selenium.common.exceptions.WebDriverException'&gt;, 在 contact_add_testcases.py 的第 32 行；Message: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A8090/ranzhi/www&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20%E6%97%A0%E6%B3%95%E5%BB%BA%E7%AB%8B%E5%88%B0%20localhost%3A8090%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5%E3%80%82
+
+-- testcases finished --
+-- testcases start --
+-- testcase：单条件-真实姓名 --
+异常类型：&lt;class 'selenium.common.exceptions.WebDriverException'&gt;, 在 contact_find_testcases.py 的第 30 行；Message: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A8090/ranzhi/www&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20%E6%97%A0%E6%B3%95%E5%BB%BA%E7%AB%8B%E5%88%B0%20localhost%3A8090%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%BF%9E%E6%8E%A5%E3%80%82
+
+-- testcases finished --
+Traceback (most recent call last):
+  File "E:\python_study\AutoRanzhi3\unit_test\contact_find_testcases.py", line 56, in test_contact_find_batch
+    self.assertEqual(nFail, 0, "共执行用例数:%d;其中失败用例数:%d"%(nCount, nFail))
+AssertionError: 1 != 0 : 共执行用例数:1;其中失败用例数:1
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+    </tbody>
+    <tfoot>
+        <tr id='total_row'>
+            <td>Total</td>
+            <td>8</td>
+            <td class="text text-success">0</td>
+            <td class="text text-danger">3</td>
+            <td class="text text-warning">5</td>
+            <td>&nbsp;</td>
+        </tr>
+    </tfoot>
+</table>
+
+    <div id='ending'>&nbsp;</div>
+</div>
+
+</body>
+</html>

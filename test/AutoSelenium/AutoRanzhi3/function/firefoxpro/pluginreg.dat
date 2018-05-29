@@ -1,0 +1,109 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version|0.17|$
+Arch|x86-msvc|$
+
+[PLUGINS]
+nptxftnWebKit.dll|$
+C:\Program Files (x86)\QQMailPlugin\nptxftnWebKit.dll|$
+1.0.0.4|$
+1365408134000|0|0|0|$
+Tencent FTN plug-in|$
+Tencent FTN plug-in|$
+1
+0|application/txftn-webkit|nptxftn||$
+npQQMailWebKit.dll|$
+C:\Program Files (x86)\QQMailPlugin\npQQMailWebKit.dll|$
+1.0.0.22|$
+1366877940000|0|0|0|$
+QQMail plugin for WebKit #1.0.0.22|$
+QQMail Plugin|$
+2
+0|application/x-tencent-qmail-webkit|QQMailPlugin for webkit||$
+1|application/x-tencent-qmail|QQMailPlugin for webkit||$
+npSSOAxCtrlForPTLogin.dll|$
+C:\Program Files (x86)\Common Files\Tencent\TXSSO\1.2.5.18\Bin\npSSOAxCtrlForPTLogin.dll|$
+1.0.1.16|$
+1505376436000|0|0|0|$
+QQ QuickLogin Helper|$
+Tencent SSO Platform|$
+1
+0|application/nptxsso|TXSSO||$
+npQzoneMusic.dll|$
+C:\Program Files (x86)\Tencent\QQMusic\QzoneMusic\npQzoneMusic.dll|$
+9.51.3087.226|$
+1456451578000|0|0|0|$
+QQÒôÀÖ²¥·Å¿Ø¼þ|$
+QQÒôÀÖ²¥·Å¿Ø¼þ|$
+1
+0|application/tecent-qzonemusic-plugin|This plug-in is transfers of QzoneMusic when opening Qzone in a web page with Firefox.|rts|$
+npQQPhotoDrawEx.dll|$
+C:\Program Files (x86)\Tencent\Qzone\npQQPhotoDrawEx.dll|$
+2.47.312.813|$
+1376385610000|0|0|0|$
+npQQPhotoDrawEx Module|$
+npQQPhotoDrawEx|$
+1
+0|application/tencent-qqphotodrawex2-plugin||rts|$
+npXFMiniDLPlugin.dll|$
+C:\Program Files (x86)\Common Files\Tencent\QQMiniDL\60\Browser\npXFMiniDLPlugin.dll|$
+1.4.50.400|$
+1398413128000|0|0|0|$
+QQMiniDL Plugin|$
+QQMiniDL Plugin|$
+1
+0|application/npxf-qqminidl|npXFPlug|dll|$
+npactivex.dll|$
+C:\Program Files (x86)\Common Files\Tencent\Npchrome\npactivex.dll|$
+6.0.1.1|$
+1510653676073|0|0|0|$
+Tencent QQ CPHelper plugin for Chrome|$
+Tencent QQ|$
+1
+0|application/qscall-plugin|DLL|dll|$
+npQQPhoneManagerExt.dll|$
+C:\Program Files (x86)\Common Files\Tencent\QQPhoneManager\2.0.201.3192\npQQPhoneManagerExt.dll|$
+2.0.201.3198|$
+1401444304000|0|0|0|$
+QQPhoneManager Onekey-Install plug-in for Android Phones|$
+应用宝一键安装插件|$
+1
+0|application/qqphonemanagerplugin|QQPhoneManager|dll|$
+NPSPWRAP.DLL|$
+C:\PROGRA~2\MICROS~1\Office15\NPSPWRAP.DLL|$
+15.0.4420.1017|$
+1349094748000|0|0|0|$
+The plugin allows you to have a better experience with Microsoft SharePoint|$
+Microsoft Office 2013|$
+2
+0|application/x-sharepoint|SharePoint Plug-in for Firefox||$
+1|application/x-sharepoint-uc|||$
+npzoomplugin.dll|$
+C:\Users\Administrator\AppData\Roaming\Zoom\bin\npzoomplugin.dll|$
+4.1.11049.1024|$
+1510285028561|0|0|0|$
+Zoom launcher - 3.0.1|$
+Zoom launcher - 3.0.1|$
+1
+0|application/x-zoom-scriptable-plugin|Zoom launcher - 3.0.1|zoom|$
+npqqwebgame.dll|$
+C:\Users\Administrator\AppData\Roaming\Tencent\WebGamePlugin\1.0.4.3\npqqwebgame.dll|$
+1.0.4.3|$
+1445322560000|0|0|0|$
+QQWebGamePlugin Pro|$
+QQGamePlugin Pro|$
+1
+0|application/npqqwebgame|QQWebGamePlugin Pro|rts|$
+npFoxitReaderPlugin.dll|$
+C:\Program Files (x86)\Foxit Software\Foxit Reader\plugins\npFoxitReaderPlugin.dll|$
+2.2.7.818|$
+1505209046000|0|0|0|$
+Foxit Reader Plug-In For Firefox and Netscape|$
+Foxit Reader Plugin for Mozilla|$
+3
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.fdf||fdf|$
+2|application/vnd.ppdf||ppdf|$
+
+[INVALID]
